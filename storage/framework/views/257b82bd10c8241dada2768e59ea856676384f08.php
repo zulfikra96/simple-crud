@@ -35,6 +35,6 @@
   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
   crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="/js/app.js"></script>
+    <script src="<?php echo e(elixir('/js/app.js')); ?>"></script>
 </body>
 </html>
