@@ -1,5 +1,5 @@
 <?php
-
+ use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,4 +23,6 @@ Route::group(['middleware' => 'api'], function(){
     Route::get('cars', function(){
         return App\Car::latest()->orderBy('created_at','desc')->get();
     });
+
+    Route::post('cars/store', 'HomeController@cars');
 });

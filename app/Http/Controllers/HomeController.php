@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Car;
+use Response;
 class HomeController extends Controller
 {
     /**
@@ -13,7 +14,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        
     }
 
     /**
@@ -24,5 +25,14 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function cars(Request $request, Car $car)
+    {   
+        $car->create(['cars' => $request->get('cars')]);
+        
+        return response()->json([
+            'data' => 'berhasil'
+        ]);
     }
 }
