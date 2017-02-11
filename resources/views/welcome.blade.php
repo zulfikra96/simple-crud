@@ -6,7 +6,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="{{elixir('css/app.css')}}">
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script>window.laravel = {csrfToken: '{{csrf_token()}}'} </script>
+    <script>
+    window.Laravel = <?php echo json_encode([
+        'csrfToken' => csrf_token(),
+    ]); ?>
+</script>
 </head>
 <body>
     <div id="app">

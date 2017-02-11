@@ -18,3 +18,9 @@ Route::get('/', function () {
 Auth::routes();
 
 
+
+Route::group(['middleware' => 'api'], function(){
+    Route::get('cars', function(){
+        return App\Car::latest()->orderBy('created_at','desc')->get();
+    });
+});
