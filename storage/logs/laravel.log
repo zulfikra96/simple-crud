@@ -1,0 +1,11 @@
+[2017-02-11 10:49:06] local.ERROR: Symfony\Component\Console\Exception\CommandNotFoundException: Command "key:generates" is not defined.
+
+Did you mean one of these?
+    key:generate
+    event:generate in /home/zulfikra/Desktop/latihan/webDevelopment/blog-vue/vendor/symfony/console/Application.php:534
+Stack trace:
+#0 /home/zulfikra/Desktop/latihan/webDevelopment/blog-vue/vendor/symfony/console/Application.php(182): Symfony\Component\Console\Application->find('key:generates')
+#1 /home/zulfikra/Desktop/latihan/webDevelopment/blog-vue/vendor/symfony/console/Application.php(116): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 /home/zulfikra/Desktop/latihan/webDevelopment/blog-vue/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(121): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#3 /home/zulfikra/Desktop/latihan/webDevelopment/blog-vue/artisan(35): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#4 {main}  
