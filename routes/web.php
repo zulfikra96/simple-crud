@@ -25,4 +25,5 @@ Route::group(['middleware' => 'api'], function(){
     });
 
     Route::post('cars/store', 'HomeController@cars');
+    Route::post('cars/delete/{id}', 'HomeController@deleteCars');
 });

@@ -35,4 +35,13 @@ class HomeController extends Controller
             'data' => 'berhasil'
         ]);
     }
+
+    public function deleteCars(Request $request,Car $cars, $id)
+    {
+        
+       $cars->where('id',$id)->delete();
+       return response()->json([
+           'data' => 'berhasil di hapus'
+       ]);
+    }
 }
