@@ -77,7 +77,7 @@
 
             deleteData(id)
             {
-                this.$http.post('/cars/delete/'+ id)
+                this.$http.post('/cars/delete/'+ id ,id)
                 console.log(id)
                 this.fetchData()
             }
